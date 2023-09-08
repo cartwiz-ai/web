@@ -1,0 +1,71 @@
+/* <div>
+			<div className={styles.inputFieldContainer}>
+				<input type="text" />
+				<img src={search} alt="search icon" />
+			</div>
+
+			<div className={styles.buttonsContainer}>
+				<img src={mic} alt="microphone icon" />
+				<img src={image} alt="image icon" />
+			</div>
+			
+		</div>
+		
+
+	Write awesome styles for the above markup
+
+
+		*/
+
+
+.searchWrapper {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	background-color: #e0e0e0;
+}
+
+.inputFieldContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    flex: 1;
+    margin-right: 25px;
+}
+
+.inputFieldContainer input {
+    width: 100%;
+    height: 90%;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding-left: 10px;
+	background: #e0e0e0;
+}
+
+.inputFieldContainer img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    /* width: 50%; */
+    justify-content: center;
+}
+
+.buttonsContainer img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
