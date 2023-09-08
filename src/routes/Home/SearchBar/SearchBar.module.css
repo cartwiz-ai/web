@@ -1,23 +1,3 @@
-/* <div>
-			<div className={styles.inputFieldContainer}>
-				<input type="text" />
-				<img src={search} alt="search icon" />
-			</div>
-
-			<div className={styles.buttonsContainer}>
-				<img src={mic} alt="microphone icon" />
-				<img src={image} alt="image icon" />
-			</div>
-			
-		</div>
-		
-
-	Write awesome styles for the above markup
-
-
-		*/
-
-
 .searchWrapper {
 	display: flex;
     flex-direction: row;
@@ -68,4 +48,7 @@
     margin-right: 10px;
 }
 
+.imageIcon {
+	margin-bottom: 3px;
+}
 
