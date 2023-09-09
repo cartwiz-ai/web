@@ -55,7 +55,7 @@ export default function Product() {
 	}, [])
 
 	const chatWithChatBot = () => {
-		console.log("REACT SUCKS")
+		navigate(`/chat/${productId}`)
 	}
 
 	let handleTryOnButton = () => {
