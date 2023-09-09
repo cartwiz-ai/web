@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import Webcam from "react-webcam"
-import * as tf from "@tensorflow/tfjs"
-import * as mobilenet from "@tensorflow-models/mobilenet"
+// import * as tf from "@tensorflow/tfjs"
+// import * as mobilenet from "@tensorflow-models/mobilenet"
 
 export default function ImageSearch() {
 	const webcamRef = useRef(null)
