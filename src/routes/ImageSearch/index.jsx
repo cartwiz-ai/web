@@ -1,11 +1,15 @@
+import styles from "./ImageSearch.module.css"
 import React, { useRef, useEffect, useState } from "react"
 import Webcam from "react-webcam"
+import { useNavigate } from "react-router-dom"
 // import * as tf from "@tensorflow/tfjs"
 // import * as mobilenet from "@tensorflow-models/mobilenet"
 
 export default function ImageSearch() {
 	const webcamRef = useRef(null)
 	const [model, setModel] = useState(null)
+	
+	let [chips, setChips] = useState([])
 
 	useEffect(() => {
 		async function loadModel() {
@@ -32,8 +36,12 @@ export default function ImageSearch() {
 				.expandDims()
 			const predictions = await model.classify(tensor)
 			console.log(predictions)
+			let chips = predictions.map((prediction) => prediction.className)
+			setChips(chips)
+
 		}
 	}
+
 
 	return (
 		<>
@@ -43,7 +51,34 @@ export default function ImageSearch() {
 				screenshotFormat="image/jpeg"
 				videoConstraints={{ facingMode: "environment" }}
 			/>
-			<button onClick={capture}>Classify Image</button>
+			<button onClick={capture}>Image Search</button>
+
+			{
+				chips.length > 0 ? <Chips chips={chips} /> : <> </>
+			}
+
 		</>
 	)
+}
+
+function Chips({ chips }) {
+
+	return (
+		<div className={styles.chipsContainer}>
+			{chips.map((chip, index) => (
+				<Chip chip={chip} key={index} />
+			))}
+		</div>
+	)
+}
+
+function Chip({ chip }) {
+
+	let navigate = useNavigate()
+
+	let handleClick = () => {
+		navigate(`/search?q=${chip}`)
+	}
+
+	return <span className={styles.chipSpan} onClick={handleClick}>{chip}</span>
 }
