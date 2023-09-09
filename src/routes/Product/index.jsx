@@ -54,8 +54,8 @@ export default function Product() {
 		main()
 	}, [])
 
-	const handleBuyNow = () => {
-		// Handle buy now functionality here
+	const chatWithChatBot = () => {
+		console.log("REACT SUCKS")
 	}
 
 	let handleTryOnButton = () => {
@@ -66,9 +66,6 @@ export default function Product() {
 		<div>
 			<div className={styles.buttonHolder}>
 				<button className={styles.tryOnButton} onClick={handleTryOnButton}>Try On</button>
-				<button className={styles.variantTryOnButton}>
-					Variant Try On
-				</button>
 			</div>
 			<div className={styles.productImage}>
 				<img
@@ -86,7 +83,7 @@ export default function Product() {
 				<h1>{productDisplayName}</h1>
 				<span className={styles.aiSummary}>{aiSummary}</span>
 				<p>Color: {baseColour}</p>
-				<button onClick={handleBuyNow}>Buy Now</button>
+				<button onClick={chatWithChatBot}>Chat about this...</button>
 				<div>
 					<h2>Customer Reviews</h2>
 					{/* Add customer reviews section here */}
