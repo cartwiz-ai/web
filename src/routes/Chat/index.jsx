@@ -10,8 +10,8 @@ export default function Chat() {
 
 	let [product, setProduct] = useState({})
 
-	let PRODUCT_API_URL = "http://localhost:4003/api/product/id"
-	let CHATBOT_API_ENDPOINT = "http://localhost:4003/api/chatbot/chat"
+	let PRODUCT_API_URL = "https://cartwiz.hop.sh/api/product/id"
+	let CHATBOT_API_ENDPOINT = "https://cartwiz.hop.sh/api/chatbot/chat"
 
 	let { productId } = useParams()
 	let navigate = useNavigate()

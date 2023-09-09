@@ -26,7 +26,7 @@ function Category({ categoryName, items }) {
 }
 
 function Recommendations() {
-	const URL_TO_FETCH = `http://localhost:4003/api/product/home`
+	const URL_TO_FETCH = `https://cartwiz.hop.sh/api/product/home`
 
 	const [categories, setCategories] = useState([])
 	let [isLoading, setIsLoading] = useState(true)
