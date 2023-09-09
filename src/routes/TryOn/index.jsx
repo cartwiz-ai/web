@@ -8,7 +8,7 @@ import man from "/man.jpg"
 
 function TryOn() {
 
-	let URL_TO_FETCH = `http://localhost:4003/api/product/id`
+	let URL_TO_FETCH = `https://cartwiz.hop.sh/api/product/id`
 	
 	let { productId } = useParams()
 	let navigate = useNavigate()

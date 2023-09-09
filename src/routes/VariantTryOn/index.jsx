@@ -7,7 +7,7 @@ import ProductItem from "../../components/ProductItem"
 
 export default function VariantTryOn() {
 
-	let URL_TO_FETCH = `http://localhost:4003/api/product/id`
+	let URL_TO_FETCH = `https://cartwiz.hop.sh/api/product/id`
 
 	let { variantId } = useParams()
 	let navigate = useNavigate()

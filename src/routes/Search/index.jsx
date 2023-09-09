@@ -5,7 +5,7 @@ import ProductItem from "../../components/ProductItem"
 import SearchBar from "../Home/SearchBar"
 
 const SEARCH_ENDPOINT =
-	"http://localhost:4003/api/product/getProduct?searchString="
+	"https://cartwiz.hop.sh/api/product/getProduct?searchString="
 
 export default function Search() {
 	const [searchParams, _] = useSearchParams()

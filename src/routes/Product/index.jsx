@@ -3,9 +3,9 @@ import styles from "./Product.module.css"
 import { useParams, useNavigate } from "react-router-dom"
 
 export default function Product() {
-	let URL_TO_FETCH = `http://localhost:4003/api/product/getProductDetails`
+	let URL_TO_FETCH = `https://cartwiz.hop.sh/api/product/getProductDetails`
 	let IMAGE_URL = "https://cartwiz-images.pages.dev"
-	let URL_TO_AI_SUMMARY = "http://localhost:4003/api/product/getProductRating"
+	let URL_TO_AI_SUMMARY = "https://cartwiz.hop.sh/api/product/getProductRating"
 
 	const [reviews, setReviews] = useState([])
 	const [isLoading, setIsLoading] = useState(true)
