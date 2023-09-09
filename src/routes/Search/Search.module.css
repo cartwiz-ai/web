@@ -1,0 +1,18 @@
+.productsHolder {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    grid-gap: 13px;
+    padding-top: 26px;
+}
+
+.loadingWrapper {
+	height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
