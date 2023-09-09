@@ -6,14 +6,14 @@ import mic from "./assets/mic.svg"
 import search from "./assets/search.svg"
 import hearing from "./assets/hearing.svg"
 
-export default function SearchBar() {
+export default function SearchBar({text}) {
 
 	let navigate = useNavigate()
 
 	let [isListening, setIsListening] = useState(false)
 
 
-	let [textValue, setTextValue] = useState("")
+	let [textValue, setTextValue] = useState(text || "")
 
 	let handleTextChange = (event) => {
 		setTextValue(event.target.value)
@@ -29,6 +29,12 @@ export default function SearchBar() {
 	let handleImageSearchButtonClick = () => {
 		console.log("image search button clicked")
 		navigate("/imageSearch")
+	}
+
+	let handleEnterKeyDown = (event) => {
+		if (event.key === "Enter") {
+			handleSearchButtonClick()
+		}
 	}
 
 
@@ -78,6 +84,7 @@ export default function SearchBar() {
 					value={textValue}
 					placeholder="Search anything..."
 					onChange={handleTextChange}
+					onKeyDown={handleEnterKeyDown}
 				/>
 				<img src={search} alt="search icon"
 				
